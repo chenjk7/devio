@@ -1,0 +1,54 @@
+//users
+export const USER_LOADING = "USER_LOADING";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const GETUSER_SUCCESS = "GETUSER_SUCCESS";
+export const GETUSER_FAIL = "GETUSER_FAIL";
+export const LOGOUT_USER = "LOGOUT_USER";
+export const UPDATE_ICON = "UPDATE_ICON";
+//error
+export const SET_ALERT = "SET_ERROR";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+export const SET_SNACK = "SET_SNACK";
+export const REMOVE_SNACK = "REMOVE_SNACK";
+
+// posts
+export const UPDATE_COVER = "UPDATE_COVER";
+export const POSTS_LOADING = "POSTS_LOADING";
+export const GET_INIT_POSTS = "GET_INIT_POSTS";
+export const GET_POSTS = "GET_POSTS";
+export const GET_POST = "GET_POST";
+export const INFINIT_POSTS = "INFINIT_POSTS";
+export const CREATE_POST = "CREATE_POST";
+export const UPDATE_LIKES = "UPDATE_LIKES";
+export const CLEAR_POSTS = "CLEAR_POSTS";
+export const GET_PROFILES = "GET_PROFILES";
+export const COMMENT_POST = "COMMENT_POST";
+export const LIKE_UPDATE = "LIKE_UPDATE";
+export const DELETE_POST = "DELETE_POST";
+
+// profile
+export const GET_PROFILE = "GET_PROFILE";
+export const GET_MYPROFILE = "GET_MYPROFILE";
+export const INFINIT_PROFILES = "INFINIT_PROFILES";
+export const GET_INIT_PROFILES = "GET_INIT_PROFILES";
+export const CLEAR_PROFILE = "CLEAR_PROFILE";
+export const CREATE_PROFILE = "CREATE_PROFILE";
+export const UPDATE_PROFILE = "UPDATE_PROFILE";
+export const PROFILE_LOADING = "PROFILE_LOADING";
+export const UPDATE_FOLLOW = "UPDATE_FOLLOW";
+
+//walls
+export const GET_WALL = "GET_WALL";
+export const GET_INIT_WALL = "GET_INIT_WALL";
+export const INFINIT_WALL = "INFINIT_WALL";
+export const CREATE_WALLPOST = "CREATE_WALLPOST";
+export const COMMENT_WALLPOST = "COMMENT_WALLPOST";
+export const UPDATE_WALLLIKES = "UPDATE_WALLLIKES";
+export const WALLPOST_DELETED = "WALLPOST_DELETED";
+export const CLEAR_WALL = "CLEAR_WALL";
+export const DETECT_WALLPOSTS = "DETECT_WALLPOSTS";
+export const CLEAR_DETECT_WALLPOSTS = "CLEAR_DETECT_WALLPOSTS";
+export const DELETE_WALLPOST = "DELETE_WALLPOST";

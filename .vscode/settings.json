@@ -1,0 +1,22 @@
+{
+   "editor.defaultFormatter": "esbenp.prettier-vscode",
+   "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+   },
+   "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+   },
+   "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+   },
+   "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+   },
+
+   "editor.tabSize": 3,
+   "prettier.tabWidth": 3,
+   "editor.formatOnSave": true
+}
