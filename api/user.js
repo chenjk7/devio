@@ -15,7 +15,7 @@ const {
    AWS_BUCKET_NAME,
    AWS_KEY,
 } = require("../config/default");
-// const userWall = require("../models/userWall");
+// const userWall = require("../models/UserWall");
 const AWS = require("aws-sdk");
 
 router.post(

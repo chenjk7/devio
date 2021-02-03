@@ -7,7 +7,7 @@ const Logger = require("../util/logger");
 const router = express.Router();
 const { CheckIdisValid, validationErrors } = require("../middleware/validator");
 const { validationError, CheckInput } = require("../middleware/validator");
-const userWall = require("../models/userWall");
+const userWall = require("../models/UserWall");
 const Post = require("../models/Post");
 const fs = require("fs");
 const {
