@@ -191,7 +191,7 @@ export const createPost = (
          //    payload: res.data,
          // });
       }
-      // if (clearInput) clearInput();
+      if (clearInput) clearInput();
       if (histroy) histroy.push('/posts');
    } catch (error) {
       if (error.response && error.response.data && error.response.data.errors) {

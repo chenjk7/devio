@@ -98,31 +98,31 @@ const AddExperienceForm = ({ handleClose, addExperience }) => {
    };
    return (
       <div className={classes.root}>
-         <Typography variant={Desktop ? 'h3' : 'h5'} color="primary">
+         <Typography variant={Desktop ? 'h3' : 'h5'} color='primary'>
             Add experience
          </Typography>
-         <Typography variant="subtitle1">
+         <Typography variant='subtitle1'>
             Add a new work experience or a bootcamp you took
          </Typography>
-         <Typography color="textSecondary" variant="p">
+         <Typography color='textSecondary' variant='p'>
             * is required field
          </Typography>
          <form
             className={classes.form}
             noValidate
-            autoComplete="off"
+            autoComplete='off'
             onSubmit={onSubmit}
          >
             <TextField
                select
-               label="Job title"
+               label='Job title'
                required
                value={info.title}
-               name="title"
+               name='title'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
-               helperText="Please select your title"
+               helperText='Please select your title'
             >
                {positions.map((option, index) => (
                   <MenuItem key={index} value={option}>
@@ -132,53 +132,53 @@ const AddExperienceForm = ({ handleClose, addExperience }) => {
             </TextField>
             <TextField
                required
-               id="standard-required"
-               label="Company"
-               nane="company"
-               helperText="Which company you worked for"
-               defaultValue=""
-               placeholder="company"
+               id='standard-required'
+               label='Company'
+               nane='company'
+               helperText='Which company you worked for'
+               defaultValue=''
+               placeholder='company'
                value={info.company}
-               name="company"
+               name='company'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
             />
             <TextField
                required
-               id="standard-required"
-               label="Location"
-               nane="location"
-               helperText=""
-               defaultValue=""
-               placeholder="location"
+               id='standard-required'
+               label='Location'
+               nane='location'
+               helperText=''
+               defaultValue=''
+               placeholder='location'
                value={info.location}
-               name="location"
+               name='location'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
             />
             <TextField
                required
-               id="standard-required"
-               label="Description"
-               nane="description"
-               helperText=""
-               defaultValue=""
-               placeholder="description"
+               id='standard-required'
+               label='Description'
+               nane='description'
+               helperText=''
+               defaultValue=''
+               placeholder='description'
                value={info.description}
-               name="description"
+               name='description'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
             />
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                <KeyboardDatePicker
-                  format="MM/dd/yyyy"
-                  margin="normal"
-                  id="From date"
-                  name="from"
-                  label="Date picker inline"
+                  format='MM/dd/yyyy'
+                  margin='normal'
+                  id='From date'
+                  name='from'
+                  label='From'
                   value={info.from}
                   onChange={(date) => {
                      setInfo({ ...info, from: date });
@@ -196,17 +196,17 @@ const AddExperienceForm = ({ handleClose, addExperience }) => {
                         to: new Date(),
                      });
                   }}
-                  name="current"
-                  color="primary"
+                  name='current'
+                  color='primary'
                />
             </div>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                <KeyboardDatePicker
                   disabled={info.current}
-                  format="MM/dd/yyyy"
-                  margin="normal"
-                  id="To date"
-                  label="Date picker inline"
+                  format='MM/dd/yyyy'
+                  margin='normal'
+                  id='To date'
+                  label='To'
                   value={info.to}
                   onChange={(date) => {
                      setInfo({ ...info, to: date });
@@ -215,12 +215,12 @@ const AddExperienceForm = ({ handleClose, addExperience }) => {
             </MuiPickersUtilsProvider>
 
             <div className={classes.action}>
-               <Button variant="contained" type="Submit" color="primary">
+               <Button variant='contained' type='Submit' color='primary'>
                   Submit
                </Button>
                <Button
-                  variant="contained"
-                  color="secondary"
+                  variant='contained'
+                  color='secondary'
                   onClick={handleClose}
                >
                   Cancel

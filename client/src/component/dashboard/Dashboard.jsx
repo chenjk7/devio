@@ -103,9 +103,9 @@ const Dashboard = ({
 }) => {
    const classes = useStyles();
    const { user } = auth;
-   const { profile } = profiles;
-   const { experience } = profile || {};
-   const { education } = profile || {};
+   const { myprofile } = profiles;
+   const { experience } = myprofile || {};
+   const { education } = myprofile || {};
    const { name, avatar } = user || {};
    const [open, setOpen] = useState(false);
    const [addType, SetAddType] = useState('exp');
@@ -136,13 +136,13 @@ const Dashboard = ({
    };
    return (
       <div className={classes.root}>
-         <Typography variant="h3" color="primary">
+         <Typography variant='h3' color='primary'>
             Dashboard
          </Typography>
          <div className={classes.main}>
             {!auth.loading && (
                <div className={classes.header}>
-                  <Avatar className={classes.avatar} alt="" src={avatar} />
+                  <Avatar className={classes.avatar} alt='' src={avatar} />
                   <Typography variant={Desktop ? 'h5' : 'h6'}>
                      Welcome
                   </Typography>
@@ -152,11 +152,11 @@ const Dashboard = ({
                </div>
             )}
             <div className={classes.control}>
-               {!profile ? (
+               {!myprofile ? (
                   <Fab
-                     color="primary"
-                     size="small"
-                     variant="extended"
+                     color='primary'
+                     size='small'
+                     variant='extended'
                      onClick={() => {
                         SetAddType('createProfile');
                         setOpen(true);
@@ -168,27 +168,27 @@ const Dashboard = ({
                ) : (
                   <Fragment>
                      <Fab
-                        color="secondary"
-                        size="small"
-                        variant="extended"
+                        color='secondary'
+                        size='small'
+                        variant='extended'
                         onClick={handleEditProfile}
                      >
                         <EditIcon />
                         Edit Profile
                      </Fab>
                      <Fab
-                        color="primary"
-                        size="small"
-                        variant="extended"
+                        color='primary'
+                        size='small'
+                        variant='extended'
                         onClick={handleAddExp}
                      >
                         <AddIcon />
                         Add Experience
                      </Fab>
                      <Fab
-                        color="primary"
-                        size="small"
-                        variant="extended"
+                        color='primary'
+                        size='small'
+                        variant='extended'
                         onClick={handleAddEdu}
                      >
                         <AddIcon />
@@ -198,18 +198,18 @@ const Dashboard = ({
                )}
             </div>
             <div className={classes.experience}>
-               <Typography variant="h4">Experiences:</Typography>
+               <Typography variant='h4'>Experiences:</Typography>
                <Experiences experience={experience} onDeleteExp={onDeleteExp} />
             </div>
             <div className={classes.education}>
-               <Typography variant="h4">Educations:</Typography>
+               <Typography variant='h4'>Educations:</Typography>
                <Education education={education} onDeleteEdu={onDeleteEdu} />
             </div>
 
             <div>
                <Modal
-                  aria-labelledby="transition-modal-title"
-                  aria-describedby="transition-modal-description"
+                  aria-labelledby='transition-modal-title'
+                  aria-describedby='transition-modal-description'
                   className={classes.modal}
                   open={open}
                   onClose={handleClose}

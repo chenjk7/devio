@@ -97,60 +97,60 @@ const AddEducationForm = ({ handleClose, addEducation }) => {
    ];
    return (
       <div className={classes.root}>
-         <Typography variant={Desktop ? 'h3' : 'h5'} color="primary">
+         <Typography variant={Desktop ? 'h3' : 'h5'} color='primary'>
             Add education
          </Typography>
-         <Typography variant="subtitle1">
+         <Typography variant='subtitle1'>
             Add a new work experience or a bootcamp you took
          </Typography>
-         <Typography color="textSecondary" variant="p">
+         <Typography color='textSecondary' variant='p'>
             * is required field
          </Typography>
          <form
             className={classes.form}
             noValidate
-            autoComplete="off"
+            autoComplete='off'
             onSubmit={onSubmit}
          >
             <TextField
                required
-               id="standard-required"
-               label="School"
-               nane="school"
-               helperText=""
-               defaultValue=""
-               placeholder="what is the school name"
+               id='standard-required'
+               label='School'
+               nane='school'
+               helperText=''
+               defaultValue=''
+               placeholder='what is the school name'
                value={info.school}
-               name="school"
+               name='school'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
             />
             <TextField
                required
-               id="standard-required"
-               label="Major"
-               nane="major"
-               helperText=""
-               defaultValue=""
-               placeholder="What is your major"
+               id='standard-required'
+               label='Major'
+               nane='major'
+               helperText=''
+               defaultValue=''
+               placeholder='What is your major'
                value={info.major}
-               name="major"
+               name='major'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
             />
             <TextField
                select
-               label="Degree"
+               label='Degree'
                required
-               nane="degree"
+               nane='degree'
                value={info.degree}
-               name="degree"
+               name='degree'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
-               helperText="Please select your degree"
+               helperText='Please select your degree'
             >
                {degreeList.map((option, index) => (
                   <MenuItem key={index} value={option}>
@@ -161,11 +161,11 @@ const AddEducationForm = ({ handleClose, addEducation }) => {
 
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                <KeyboardDatePicker
-                  format="MM/dd/yyyy"
-                  margin="normal"
-                  id="From date"
-                  name="from"
-                  label="Date picker inline"
+                  format='MM/dd/yyyy'
+                  margin='normal'
+                  id='From date'
+                  name='from'
+                  label='from'
                   value={info.from}
                   onChange={(date) => {
                      setInfo({ ...info, from: date });
@@ -183,17 +183,17 @@ const AddEducationForm = ({ handleClose, addEducation }) => {
                         to: new Date(),
                      });
                   }}
-                  name="current"
-                  color="primary"
+                  name='current'
+                  color='primary'
                />
             </div>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                <KeyboardDatePicker
                   disabled={info.current}
-                  format="MM/dd/yyyy"
-                  margin="normal"
-                  id="To date"
-                  label="Date picker inline"
+                  format='MM/dd/yyyy'
+                  margin='normal'
+                  id='To date'
+                  label='To'
                   value={info.to}
                   onChange={(date) => {
                      setInfo({ ...info, to: date });
@@ -201,12 +201,12 @@ const AddEducationForm = ({ handleClose, addEducation }) => {
                />
             </MuiPickersUtilsProvider>
             <div className={classes.action}>
-               <Button variant="contained" type="Submit" color="primary">
+               <Button variant='contained' type='Submit' color='primary'>
                   Submit
                </Button>
                <Button
-                  variant="contained"
-                  color="secondary"
+                  variant='contained'
+                  color='secondary'
                   onClick={handleClose}
                >
                   Cancel

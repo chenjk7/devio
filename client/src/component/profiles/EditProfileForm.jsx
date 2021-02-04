@@ -203,31 +203,31 @@ const EditProfileForm = ({
       !loading &&
       profile && (
          <div className={modal ? classes.modalRoot : classes.root}>
-            <Typography variant={Desktop ? 'h3' : 'h5'} color="primary">
+            <Typography variant={Desktop ? 'h3' : 'h5'} color='primary'>
                Edit your user profile
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography variant='subtitle1'>
                Set up your profile, let the community know more about yourself
             </Typography>
-            <Typography color="textSecondary" variant="p">
+            <Typography color='textSecondary' variant='p'>
                * is required field
             </Typography>
             <form
                className={classes.form}
                noValidate
-               autoComplete="off"
+               autoComplete='off'
                onSubmit={onSubmit}
             >
                <TextField
                   select
-                  label="Job Status"
+                  label='Job Status'
                   required
                   value={info.status}
-                  name="status"
+                  name='status'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
-                  helperText="Please select your currency"
+                  helperText='Please select your currency'
                >
                   {positions.map((option, index) => (
                      <MenuItem key={index} value={option}>
@@ -238,26 +238,26 @@ const EditProfileForm = ({
 
                <TextField
                   required
-                  id="standard-required"
-                  label="Company"
-                  nane="company"
-                  helperText="Which company you current work for or own a company"
-                  defaultValue=""
-                  placeholder="company"
+                  id='standard-required'
+                  label='Company'
+                  nane='company'
+                  helperText='Which company you current work for or own a company'
+                  defaultValue=''
+                  placeholder='company'
                   value={info.company}
-                  name="company"
+                  name='company'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
                />
                <Autocomplete
                   multiple
-                  id="tags-filled"
+                  id='tags-filled'
                   options={Options.map((option) => option)}
                   defaultValue={info.skills}
                   freeSolo
                   value={info.skills}
-                  name="skills"
+                  name='skills'
                   onChange={(e, newValue) => {
                      // onSetHeight();
                      // setSkills([...newValue]);
@@ -266,7 +266,7 @@ const EditProfileForm = ({
                   renderTags={(value, getTagProps) =>
                      value.map((option, index) => (
                         <Chip
-                           variant="outlined"
+                           variant='outlined'
                            label={option}
                            {...getTagProps({ index })}
                         />
@@ -276,140 +276,139 @@ const EditProfileForm = ({
                      <TextField
                         required
                         {...params}
-                        label="Skills"
-                        placeholder="Choose from the list, or enter a skill"
+                        label='Skills'
+                        placeholder='Choose from the list, or enter a skill'
                      />
                   )}
                />
 
                <TextField
-                  id="standard-required"
-                  label="email"
-                  nane="email"
-                  helperText=""
-                  defaultValue=""
-                  placeholder="email"
+                  id='standard-required'
+                  label='email'
+                  nane='email'
+                  helperText=''
+                  defaultValue=''
+                  placeholder='email'
                   value={info.email}
-                  name="email"
+                  name='email'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
                />
                <TextField
-                  required
-                  id="standard-required"
-                  label="phone"
-                  nane="phone"
-                  helperText=""
-                  defaultValue=""
-                  placeholder="phone"
+                  id='standard-required'
+                  label='phone'
+                  nane='phone'
+                  helperText=''
+                  defaultValue=''
+                  placeholder='phone'
                   value={info.phone}
-                  name="phone"
+                  name='phone'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
                />
                <TextField
-                  id="standard-required"
-                  label="homepage"
-                  nane="homepage"
-                  helperText=""
-                  defaultValue=""
-                  placeholder="homepage"
+                  id='standard-required'
+                  label='homepage'
+                  nane='homepage'
+                  helperText=''
+                  defaultValue=''
+                  placeholder='homepage'
                   value={info.homepage}
-                  name="homepage"
+                  name='homepage'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
                />
                <TextField
-                  id="standard-required"
-                  label="Bio"
+                  id='standard-required'
+                  label='Bio'
                   multiline
-                  nane="bio"
-                  helperText=""
-                  defaultValue=""
-                  placeholder="Tell us about yourself"
+                  nane='bio'
+                  helperText=''
+                  defaultValue=''
+                  placeholder='Tell us about yourself'
                   value={info.bio}
-                  name="bio"
+                  name='bio'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
                />
                <TextField
-                  id="standard-required"
-                  label="Location"
-                  nane="address"
-                  helperText=""
-                  defaultValue=""
-                  placeholder="Location or address"
+                  id='standard-required'
+                  label='Location'
+                  nane='address'
+                  helperText=''
+                  defaultValue=''
+                  placeholder='Location or address'
                   value={info.address}
-                  name="address"
+                  name='address'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
                />
                <TextField
-                  id="standard-required"
-                  label="github"
-                  nane="github"
-                  helperText=""
-                  defaultValue=""
-                  placeholder="github"
+                  id='standard-required'
+                  label='github'
+                  nane='github'
+                  helperText=''
+                  defaultValue=''
+                  placeholder='github'
                   value={info.github}
-                  name="github"
+                  name='github'
                   onChange={(e) =>
                      setInfo({ ...info, [e.target.name]: e.target.value })
                   }
                />
                <div className={classes.sociaMediaHead}>
-                  <Typography color="primary" variant="h5">
+                  <Typography color='primary' variant='h5'>
                      Soical Media
                   </Typography>
                   <FormControlLabel
                      control={
                         <Switch checked={checked} onChange={handleShow} />
                      }
-                     label="Show"
+                     label='Show'
                   />
                </div>
                <Collapse in={checked}>
                   <div className={classes.socialMeida}>
                      <TextField
-                        id="standard-required"
-                        label="Facebook"
-                        nane="facebook"
-                        helperText=""
-                        defaultValue=""
-                        placeholder="facebook"
+                        id='standard-required'
+                        label='Facebook'
+                        nane='facebook'
+                        helperText=''
+                        defaultValue=''
+                        placeholder='facebook'
                         value={info.facebook}
-                        name="facebook"
+                        name='facebook'
                         onChange={(e) =>
                            setInfo({ ...info, [e.target.name]: e.target.value })
                         }
                      />
                      <TextField
-                        id="standard-required"
-                        label="Linkedin"
-                        nane="linkedin"
-                        helperText=""
-                        defaultValue=""
-                        placeholder="linkedin"
+                        id='standard-required'
+                        label='Linkedin'
+                        nane='linkedin'
+                        helperText=''
+                        defaultValue=''
+                        placeholder='linkedin'
                         value={info.linkedin}
-                        name="linkedin"
+                        name='linkedin'
                         onChange={(e) =>
                            setInfo({ ...info, [e.target.name]: e.target.value })
                         }
                      />
                      <TextField
-                        id="standard-required"
-                        label="Instagram"
-                        nane="instagram"
-                        helperText=""
-                        defaultValue=""
-                        placeholder="instagram"
+                        id='standard-required'
+                        label='Instagram'
+                        nane='instagram'
+                        helperText=''
+                        defaultValue=''
+                        placeholder='instagram'
                         value={info.instagram}
-                        name="instagram"
+                        name='instagram'
                         onChange={(e) =>
                            setInfo({ ...info, [e.target.name]: e.target.value })
                         }
@@ -417,12 +416,12 @@ const EditProfileForm = ({
                   </div>
                </Collapse>
                <div className={classes.action}>
-                  <Button variant="contained" type="Submit" color="primary">
+                  <Button variant='contained' type='Submit' color='primary'>
                      Submit
                   </Button>
                   <Button
-                     variant="contained"
-                     color="secondary"
+                     variant='contained'
+                     color='secondary'
                      onClick={() => {
                         if (handhleGoBack) {
                            handhleGoBack();

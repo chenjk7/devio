@@ -74,9 +74,9 @@ const Register = ({ auth: { isAuthenticated, loading }, profile }) => {
                return <div></div>;
             }
          case 2:
-            return 'exp';
+            return 'Add new experice in dashboard';
          case 3:
-            return 'edu';
+            return 'Add new Education in dashboard';
          default:
             return 'Unknown step';
       }
@@ -159,7 +159,7 @@ const Register = ({ auth: { isAuthenticated, loading }, profile }) => {
                   const labelProps = {};
                   if (isStepOptional(index)) {
                      labelProps.optional = (
-                        <Typography variant="caption">Optional</Typography>
+                        <Typography variant='caption'>Optional</Typography>
                      );
                   }
                   if (isStepSkipped(index)) {
@@ -178,10 +178,10 @@ const Register = ({ auth: { isAuthenticated, loading }, profile }) => {
                      <Typography className={classes.instructions}>
                         Regiseration completed - you&apos;re finished
                      </Typography>
-                     <Link to="/" className={classes.LinkBTN}>
+                     <Link to='/' className={classes.LinkBTN}>
                         <Button
-                           variant="contained"
-                           color="primary"
+                           variant='contained'
+                           color='primary'
                            onClick={handleReset}
                            className={classes.button}
                         >
@@ -206,8 +206,8 @@ const Register = ({ auth: { isAuthenticated, loading }, profile }) => {
                         )}
                         {isStepOptional(activeStep) && (
                            <Button
-                              variant="contained"
-                              color="primary"
+                              variant='contained'
+                              color='primary'
                               onClick={handleSkip}
                               className={classes.button}
                            >
@@ -216,8 +216,8 @@ const Register = ({ auth: { isAuthenticated, loading }, profile }) => {
                         )}
                         {isAuthenticated && (
                            <Button
-                              variant="contained"
-                              color="primary"
+                              variant='contained'
+                              color='primary'
                               onClick={handleNext}
                               className={classes.button}
                            >
@@ -227,10 +227,10 @@ const Register = ({ auth: { isAuthenticated, loading }, profile }) => {
                            </Button>
                         )}
                         {isAuthenticated && activeStep == 0 && (
-                           <Link to="/" className={classes.LinkBTN}>
+                           <Link to='/' className={classes.LinkBTN}>
                               <Button
-                                 variant="contained"
-                                 color="primary"
+                                 variant='contained'
+                                 color='primary'
                                  onClick={handleReset}
                                  className={classes.button}
                               >

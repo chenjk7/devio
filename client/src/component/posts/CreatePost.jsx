@@ -81,25 +81,25 @@ const CreatePost = ({ toggleCreatePost, createPost }) => {
    };
    return (
       <div className={classes.root}>
-         <Typography variant="h3" color="primary">
+         <Typography variant='h3' color='primary'>
             Create A Post
          </Typography>
 
-         <Typography color="textSecondary">
+         <Typography color='textSecondary'>
             Start a discussion in the community
          </Typography>
          <form className={classes.form} onSubmit={onSubmit}>
             <TextField
                required
-               id="standard-required"
-               label="Title"
-               nane="title"
-               helperText=""
-               variant="outlined"
-               defaultValue=""
-               placeholder="title"
+               id='standard-required'
+               label='Title'
+               nane='title'
+               helperText=''
+               variant='outlined'
+               defaultValue=''
+               placeholder='title'
                value={info.title}
-               name="title"
+               name='title'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
@@ -108,17 +108,17 @@ const CreatePost = ({ toggleCreatePost, createPost }) => {
                className={classes.textarea}
                rowsMin={4}
                value={info.text}
-               name="text"
+               name='text'
                onChange={(e) =>
                   setInfo({ ...info, [e.target.name]: e.target.value })
                }
-               placeholder="saying "
+               placeholder='Say something '
             />
             <div className={classes.action}>
-               <Button variant="contained" color="secondary" onClick={onCancel}>
+               <Button variant='contained' color='secondary' onClick={onCancel}>
                   Cancel
                </Button>
-               <Button variant="contained" type="Submit" color="primary">
+               <Button variant='contained' type='Submit' color='primary'>
                   Submit
                </Button>
             </div>
