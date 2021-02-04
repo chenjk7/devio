@@ -163,21 +163,21 @@ function Posts({
             </Collapse>
             <div>
                <div className={classes.postMenu}>
-                  <Typography className={classes.posttile} variant="h5">
+                  <Typography className={classes.posttile} variant='h5'>
                      Forum Posts
                   </Typography>
                   <div>
                      <IconButton
                         onClick={toggleDrawer(true)}
-                        color="inherit"
+                        color='inherit'
                         className={classes.postMenubtn}
                      >
                         <AnnouncementIcon />
                      </IconButton>
                      {auth && !auth.loading && auth.isAuthenticated && (
-                        <Tooltip title="Add a new post" aria-label="add">
+                        <Tooltip title='Add a new post' aria-label='add'>
                            <IconButton
-                              color="inherit"
+                              color='inherit'
                               onClick={toggleCreatePost}
                            >
                               <PostAddIcon />

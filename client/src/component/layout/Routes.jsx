@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
    },
    homepBody: {
       // backgroundColor: 'white',
-      maxWidth: 1200,
+      // maxWidth: 1200,
       margin: 'auto',
       // marginTop: 'auto',
       padding: theme.spacing(2),
@@ -78,54 +78,54 @@ const Routes = ({ height, onSetHeight, auth: { loading } }) => {
          <Fragment>
             <Grid container className={classes.root}>
                <Hidden lgDown>
-                  <Grid item sm={12} lg={2}></Grid>
+                  <Grid item xs={12} lg={2}></Grid>
                </Hidden>
                <Grid
                   item
-                  sm={12}
+                  xs={12}
                   lg={8}
                   style={Desktop ? { marginTop: height } : { marginTop: 0 }}
                   className={classes.homepBody}
                >
                   <Alerts />
                   <MySnackbar />
-                  <Route exact path="/" component={Homepage} />
-                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                  <Route exact path="/developers" component={Developers} />
+                  <Route exact path='/' component={Homepage} />
+                  <PrivateRoute exact path='/dashboard' component={Dashboard} />
+                  <Route exact path='/developers' component={Developers} />
                   <Route
                      exact
-                     path="/developers/:id/:page?"
+                     path='/developers/:id/:page?'
                      render={(props) => <Developer {...props} key={uuidv4()} />}
                   />
                   <Route
                      exact
-                     path="/posts"
+                     path='/posts'
                      render={(props) => <Posts {...props} key={uuidv4()} />}
                   />
-                  <Route exact path="/Posts/:id" component={Post} />
+                  <Route exact path='/Posts/:id' component={Post} />
                   <PrivateRoute
                      exact
-                     path="/create-post"
+                     path='/create-post'
                      component={CreatePost}
                   />
-                  <Route exact path="/login" component={Login} />
-                  <Route exact path="/register" component={Register} />
+                  <Route exact path='/login' component={Login} />
+                  <Route exact path='/register' component={Register} />
                   <PrivateRoute
                      exact
-                     path="/create-profile"
+                     path='/create-profile'
                      redirect={true}
                      component={CreateProfileForm}
                   />
                   <PrivateRoute
                      exact
-                     path="/edit-profile"
+                     path='/edit-profile'
                      redirect={true}
                      component={EditProfile}
                   />
                   {/* <Footer /> */}
                </Grid>
                <Hidden lgDown>
-                  <Grid item sm={12} lg={2}></Grid>
+                  <Grid item xs={12} lg={2}></Grid>
                </Hidden>
                {/* {history.location.pathname != '/' && <Footer />} */}
                <Footer />
