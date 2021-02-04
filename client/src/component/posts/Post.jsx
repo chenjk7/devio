@@ -66,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
    },
    title: {
       marginBottom: 30,
+      wordWrap: 'anywhere',
    },
    popover: {
       pointerEvents: 'none',
@@ -79,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
    },
    cardaction: {
       paddingLeft: theme.spacing(4),
+   },
+   textwrap: {
+      wordWrap: 'anywhere',
    },
 }));
 const Post = ({
@@ -138,7 +142,7 @@ const Post = ({
    };
    const popoverContent = postUserProfile != null && postUserProfile != {} && (
       <Popover
-         id="mouse-over-popover"
+         id='mouse-over-popover'
          className={classes.popover}
          classes={{
             paper: classes.paper,
@@ -191,7 +195,7 @@ const Post = ({
                                  className={classes.LinkBTN}
                               >
                                  <CusPopover
-                                    type="profile"
+                                    type='profile'
                                     name={name}
                                     link={`/api/profile/user/${postUser_id}`}
                                  />
@@ -209,7 +213,7 @@ const Post = ({
 
                               <span>
                                  on&nbsp;
-                                 <Moment format="YYYY/MM/DD">{date}</Moment>
+                                 <Moment format='YYYY/MM/DD'>{date}</Moment>
                               </span>
                            </div>
                         }
@@ -232,16 +236,21 @@ const Post = ({
                      </div> */}
 
                         <div>
-                           <Typography className={classes.title} variant="h4">
+                           <Typography className={classes.title} variant='h4'>
                               {title}
                            </Typography>
-                           <Typography variant="body2">{text}</Typography>
+                           <Typography
+                              className={classes.textwrap}
+                              variant='body2'
+                           >
+                              {text}
+                           </Typography>
                         </div>
                      </CardContent>
                      <CardActions className={classes.cardaction}>
                         <Badge
                            badgeContent={comments && comments.length}
-                           color="primary"
+                           color='primary'
                         >
                            <ChatBubbleIcon />
                         </Badge>
@@ -259,12 +268,12 @@ const Post = ({
                            }
                         >
                            <IconButton
-                              aria-label="add to favorites"
+                              aria-label='add to favorites'
                               onClick={() => handleLike(_id)}
                            >
                               <Badge
                                  badgeContent={likes && likes.length}
-                                 color="primary"
+                                 color='primary'
                               >
                                  <FavoriteIcon />
                               </Badge>
@@ -275,7 +284,7 @@ const Post = ({
                </Card>
             </div>
             <div className={classes.Comments}>
-               <Typography variant="h4">Comments:</Typography>
+               <Typography variant='h4'>Comments:</Typography>
                <CreateComment id={_id} />
                <PostComments post={post} />
             </div>

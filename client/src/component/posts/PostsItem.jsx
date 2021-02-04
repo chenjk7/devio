@@ -106,6 +106,9 @@ const useStyles = makeStyles((theme) => ({
    deletePost: {
       color: 'red',
    },
+   textwrap: {
+      wordWrap: 'anywhere',
+   },
 }));
 
 const PostItem = ({
@@ -191,7 +194,7 @@ const PostItem = ({
                   <ClickAwayListener onClickAway={handleCloseMenu}>
                      <MenuList
                         autoFocusItem={openMenu}
-                        id="menu-list-grow"
+                        id='menu-list-grow'
                         onKeyDown={handleListKeyDown}
                      >
                         {_id && postUser_id && postUser_id == _id && (
@@ -261,7 +264,7 @@ const PostItem = ({
                         className={classes.LinkBTN}
                      >
                         <CusPopover
-                           type="profile"
+                           type='profile'
                            name={name}
                            link={`/api/profile/user/${postUser_id}`}
                         />
@@ -286,10 +289,12 @@ const PostItem = ({
             <Link className={classes.link} to={`/posts/${postId}`}>
                <CardContent className={classes.cardcontent}>
                   <div>
-                     <Typography className={classes.title} variant="h4">
+                     <Typography className={classes.title} variant='h4'>
                         {title}
                      </Typography>
-                     <Typography variant="body2">{text}</Typography>
+                     <Typography className={classes.textwrap} variant='body2'>
+                        {text}
+                     </Typography>
                   </div>
                </CardContent>
             </Link>
@@ -304,12 +309,12 @@ const PostItem = ({
                   }
                >
                   <IconButton
-                     aria-label="add to favorites"
+                     aria-label='add to favorites'
                      onClick={() => handleLike(postId)}
                   >
                      <Badge
                         badgeContent={likes && likes.length}
-                        color="primary"
+                        color='primary'
                      >
                         <FavoriteIcon />
                      </Badge>
@@ -320,7 +325,7 @@ const PostItem = ({
                   <div className={classes.comments}>
                      <Badge
                         badgeContent={comments && comments.length}
-                        color="primary"
+                        color='primary'
                      >
                         <CommentIcon />
                      </Badge>
@@ -335,7 +340,7 @@ const PostItem = ({
                   })}
                   onClick={handleExpandClick}
                   aria-expanded={expanded}
-                  aria-label="show more"
+                  aria-label='show more'
                >
                   <ExpandMoreIcon />
                </IconButton>
@@ -343,12 +348,12 @@ const PostItem = ({
 
             <Collapse
                in={expanded}
-               timeout="auto"
+               timeout='auto'
                unmountOnExit
                className={classes.expandContent}
             >
                <CardContent>
-                  <Typography variant="h4">Comments:</Typography>
+                  <Typography variant='h4'>Comments:</Typography>
                   <PostComments post={post} />
                </CardContent>
             </Collapse>
