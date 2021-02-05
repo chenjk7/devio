@@ -28,38 +28,38 @@ const ExternalLinks = () => {
    };
    return (
       <div className={classes.root}>
-         <Typography className={classes.LinkTitle} variant="h6">
+         <Typography className={classes.LinkTitle} variant='h6'>
             External links
          </Typography>
-         <List component="nav" aria-label="main mailbox folders">
-            <Tooltip title="My github repo page">
+         <List component='nav' aria-label='main mailbox folders'>
+            <Tooltip title='My github repo page'>
                <ListItem
                   button
                   onClick={(event) => {
                      handleListItemClick(event, 0);
-                     window.location.href =
-                        'https://www.linkedin.com/in/ken-chen-b89b3434/';
+                     window.location.href = 'https://github.com/chenjk7';
                   }}
                >
                   <ListItemIcon>
                      <GitHubIcon />
                   </ListItemIcon>
 
-                  <ListItemText primary="Github" />
+                  <ListItemText primary='Github' />
                </ListItem>
             </Tooltip>
-            <Tooltip title="My linkedin homepage">
+            <Tooltip title='My linkedin homepage'>
                <ListItem
                   button
                   onClick={(event) => {
                      handleListItemClick(event, 1);
-                     window.location.href = 'https://github.com/chenjk7';
+                     window.location.href =
+                        'https://www.linkedin.com/in/ken-chen-b89b3434/';
                   }}
                >
                   <ListItemIcon>
                      <LinkedInIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Linkedin" />
+                  <ListItemText primary='Linkedin' />
                </ListItem>
             </Tooltip>
          </List>
